@@ -1,0 +1,26 @@
+{{template "partials/header" .}}
+
+
+    <h1>IndexPage</h1>
+    <p>{{ .Title }}</p>
+    
+<table class="ui celled table">
+    <thead>
+        <tr><th>Name</th>
+        <th>Age</th>
+        <th>Job</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{ range .Person }}
+        <tr>
+            <td data-label="Name">{{.Name}}</td>
+            <td data-label="Age">{{.Age}}</td>
+            <td data-label="Job">Engineer</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</table>
+
+
+{{template "partials/footer" .}}
